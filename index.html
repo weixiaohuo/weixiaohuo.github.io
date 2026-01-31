@@ -3,35 +3,451 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>西安火焰蓝消防有限公司｜消防员培训找火焰蓝</title>
-  <meta name="description" content="西安火焰蓝消防有限公司提供消防员培训、消防就业指导。面向18-28岁高中及以上学历人群。电话：18182611800" />
+  <title>西安火焰蓝消防有限公司｜消防员培训｜消防就业指导</title>
+  <meta name="description" content="西安火焰蓝消防有限公司提供消防员培训、消防就业指导与备考规划。面向18-28岁，高中及以上学历。咨询电话：18182611800" />
+  <meta name="keywords" content="消防员培训,消防就业指导,消防培训,西安消防培训,火焰蓝" />
   <style>
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,PingFang SC,Microsoft YaHei,sans-serif;background:#0b1220;color:#e8eefc}
-    .wrap{max-width:900px;margin:0 auto;padding:64px 20px}
-    .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px}
-    h1{margin:0 0 10px;font-size:34px}
-    p{margin:10px 0;color:rgba(232,238,252,.85);line-height:1.7}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
-    .item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:14px}
-    .btn{display:inline-block;margin-top:16px;padding:12px 14px;border-radius:12px;background:#2563eb;color:white;text-decoration:none;font-weight:700}
-    @media (max-width:760px){.grid{grid-template-columns:1fr}}
+    :root{
+      --bg:#0b1220;
+      --panel:rgba(255,255,255,.06);
+      --panel2:rgba(255,255,255,.045);
+      --border:rgba(255,255,255,.12);
+      --text:#e8eefc;
+      --muted:rgba(232,238,252,.78);
+      --muted2:rgba(232,238,252,.62);
+      --brand:#2563eb;
+      --brand2:#1d4ed8;
+      --good:#22c55e;
+      --warn:#f59e0b;
+      --radius:18px;
+      --shadow:0 18px 60px rgba(0,0,0,.35);
+      --max:1060px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,PingFang SC,Microsoft YaHei,sans-serif;
+      background:
+        radial-gradient(900px 500px at 18% 12%, rgba(37,99,235,.20), transparent 55%),
+        radial-gradient(700px 420px at 86% 18%, rgba(34,197,94,.14), transparent 60%),
+        radial-gradient(900px 520px at 50% 100%, rgba(245,158,11,.10), transparent 60%),
+        var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit}
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(140%) blur(10px);
+      background:linear-gradient(to bottom, rgba(11,18,32,.72), rgba(11,18,32,.35));
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      height:64px;
+    }
+    .logo{
+      display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px; border-radius:999px;
+      background:rgba(37,99,235,.18);
+      border:1px solid rgba(37,99,235,.35);
+      color:rgba(232,238,252,.92);
+      font-size:12px;
+    }
+    .menu{display:flex; gap:16px; align-items:center; color:var(--muted2); font-size:14px}
+    .menu a{ text-decoration:none; padding:8px 10px; border-radius:10px}
+    .menu a:hover{ background:rgba(255,255,255,.06); color:var(--text)}
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+    .btn-primary{
+      background:linear-gradient(180deg, var(--brand), var(--brand2));
+      border:1px solid rgba(37,99,235,.55);
+      box-shadow:0 14px 30px rgba(37,99,235,.25);
+    }
+    .btn:hover{ transform:translateY(-1px); transition:all .15s ease}
+    .hero{
+      padding:42px 0 18px;
+    }
+    .hero-grid{
+      display:grid; grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .hero-main{ padding:28px}
+    .kicker{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size:40px;
+      letter-spacing:.2px;
+      line-height:1.15;
+    }
+    .sub{
+      margin:0 0 16px;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:15px;
+    }
+    .points{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin:12px 0 18px;
+    }
+    .pill{
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:13px;
+      display:inline-flex; gap:8px; align-items:center;
+    }
+    .dot{width:8px;height:8px;border-radius:50%}
+    .dot.good{background:var(--good)}
+    .dot.warn{background:var(--warn)}
+    .dot.brand{background:var(--brand)}
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap}
+    .hero-side{ padding:22px}
+    .side-title{margin:0 0 12px; font-size:16px}
+    .side-item{
+      padding:14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:var(--panel2);
+      margin-bottom:12px;
+    }
+    .side-item strong{display:block; margin-bottom:6px}
+    .side-item p{margin:0; color:var(--muted2); line-height:1.7; font-size:14px}
+    .side-kv{
+      display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px
+    }
+    .kv{
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+    }
+    .kv .k{color:var(--muted2); font-size:12px}
+    .kv .v{margin-top:6px; font-weight:800}
+    section{padding:18px 0}
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin:0 0 12px;
+    }
+    .section-title h2{margin:0; font-size:22px}
+    .section-title p{margin:0; color:var(--muted2); font-size:14px; line-height:1.6}
+    .grid3{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:12px;
+    }
+    .feature{
+      padding:16px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.045);
+    }
+    .feature h3{margin:0 0 8px; font-size:16px}
+    .feature ul{margin:0; padding-left:18px; color:var(--muted); line-height:1.7; font-size:14px}
+    .split{
+      display:grid; grid-template-columns: 1fr 1fr; gap:12px;
+    }
+    .box{
+      padding:18px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+    }
+    .box h3{margin:0 0 10px; font-size:16px}
+    .box p{margin:0; color:var(--muted); line-height:1.8; font-size:14px}
+    .steps{display:grid; gap:10px}
+    .step{
+      display:flex; gap:12px; align-items:flex-start;
+      padding:14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.045);
+    }
+    .num{
+      width:30px;height:30px;border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900;
+      background:rgba(37,99,235,.18);
+      border:1px solid rgba(37,99,235,.35);
+      flex:0 0 auto;
+    }
+    .step strong{display:block; margin-bottom:4px}
+    .step span{color:var(--muted2); font-size:14px; line-height:1.7}
+    form{display:grid; gap:10px}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      outline:none;
+      font-size:14px;
+    }
+    textarea{min-height:108px; resize:vertical}
+    input::placeholder, textarea::placeholder{color:rgba(232,238,252,.45)}
+    .hint{color:rgba(232,238,252,.55); font-size:12px; line-height:1.6}
+    .footer{
+      padding:26px 0 40px;
+      color:rgba(232,238,252,.55);
+      font-size:12px;
+    }
+    .footer a{color:rgba(232,238,252,.65)}
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns:1fr}
+      h1{font-size:32px}
+      .grid3{grid-template-columns:1fr}
+      .split{grid-template-columns:1fr}
+      .row{grid-template-columns:1fr}
+      .menu{display:none}
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h1>消防员培训找火焰蓝</h1>
-      <p>西安火焰蓝消防有限公司｜消防员培训 · 消防就业指导</p>
-      <p>面向人群：18-28岁｜高中及以上学历</p>
-
-      <div class="grid">
-        <div class="item"><strong>消防员培训</strong><p>系统课程 + 训练安排，按阶段推进。</p></div>
-        <div class="item"><strong>就业指导</strong><p>方向选择、准备清单、面试要点。</p></div>
-        <div class="item"><strong>咨询报名</strong><p>电话：18182611800</p></div>
+  <div class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <div class="logo">
+          <span style="font-size:18px">火焰蓝</span>
+          <span class="badge">消防员培训 · 就业指导</span>
+        </div>
+        <div class="menu">
+          <a href="#services">服务</a>
+          <a href="#process">流程</a>
+          <a href="#about">关于</a>
+          <a href="#contact">联系</a>
+        </div>
+        <div class="cta">
+          <a class="btn" href="#contact">在线咨询</a>
+          <a class="btn btn-primary" href="tel:18182611800">电话：18182611800</a>
+        </div>
       </div>
-
-      <a class="btn" href="tel:18182611800">电话咨询：18182611800</a>
     </div>
   </div>
+
+  <div class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="card hero-main">
+          <div class="kicker">
+            <span class="badge">西安火焰蓝消防有限公司</span>
+            <span class="badge" style="background:rgba(34,197,94,.12);border-color:rgba(34,197,94,.28)">面向18-28岁｜高中及以上学历</span>
+          </div>
+          <h1>消防员培训找火焰蓝</h1>
+          <p class="sub">
+            我们提供消防员培训、消防就业指导与备考规划服务。目标很简单：让你走一条更清晰、更稳的路径，少踩坑，少走弯路。
+          </p>
+
+          <div class="points">
+            <span class="pill"><span class="dot brand"></span> 训练安排清晰</span>
+            <span class="pill"><span class="dot good"></span> 备考资料与要点</span>
+            <span class="pill"><span class="dot warn"></span> 就业方向规划</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:18182611800">立即电话咨询</a>
+            <a class="btn" href="#services">查看服务内容</a>
+          </div>
+        </div>
+
+        <div class="card hero-side">
+          <h3 class="side-title">你可能最关心的</h3>
+          <div class="side-item">
+            <strong>适合谁</strong>
+            <p>18-28岁｜高中及以上学历｜希望走更稳的消防就业路径。</p>
+          </div>
+          <div class="side-item">
+            <strong>提供什么</strong>
+            <p>消防员培训、就业方向建议、准备清单、面试要点与阶段规划。</p>
+          </div>
+
+          <div class="side-kv">
+            <div class="kv">
+              <div class="k">咨询电话</div>
+              <div class="v">18182611800</div>
+            </div>
+            <div class="kv">
+              <div class="k">服务地区</div>
+              <div class="v">西安/陕西</div>
+            </div>
+          </div>
+
+          <p class="hint" style="margin-top:10px">
+            提示：本页面为展示页，信息可按你公司实际情况继续补充完善（课程周期、师资、地址、资质等）。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h2>服务内容</h2>
+          <p>把服务说清楚，比喊口号更像正规公司。</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="feature">
+          <h3>消防员培训</h3>
+          <ul>
+            <li>系统课程与训练安排</li>
+            <li>按阶段推进，节奏可控</li>
+            <li>重点难点拆解，减少盲练</li>
+          </ul>
+        </div>
+        <div class="feature">
+          <h3>就业指导</h3>
+          <ul>
+            <li>方向选择与岗位匹配</li>
+            <li>准备清单与材料规划</li>
+            <li>面试要点与常见问题</li>
+          </ul>
+        </div>
+        <div class="feature">
+          <h3>备考规划</h3>
+          <ul>
+            <li>周期规划：目标-计划-复盘</li>
+            <li>关键节点提醒与推进</li>
+            <li>避免“瞎忙很久没结果”</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h2>报名与推进流程</h2>
+          <p>用流程化表达信任感，商务稳重就靠这个。</p>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="box">
+          <h3>流程</h3>
+          <div class="steps">
+            <div class="step">
+              <div class="num">1</div>
+              <div>
+                <strong>咨询沟通</strong>
+                <span>了解基本情况，确认方向与目标。</span>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">2</div>
+              <div>
+                <strong>制定计划</strong>
+                <span>按时间与基础制定训练与备考节奏。</span>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">3</div>
+              <div>
+                <strong>执行与复盘</strong>
+                <span>阶段推进，发现问题及时调整。</span>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">4</div>
+              <div>
+                <strong>就业指导</strong>
+                <span>材料准备、面试要点、方向建议。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box" id="about">
+          <h3>关于我们</h3>
+          <p>
+            西安火焰蓝消防有限公司，聚焦消防员培训与就业指导。我们主张把路径讲清楚，把动作做扎实，让学员少走弯路。
+          </p>
+          <p style="margin-top:10px">
+            你可以在这里补充：公司地址、师资介绍、办学资质/合作单位、训练场地照片等，这些会显著提升可信度。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h2>联系与咨询</h2>
+          <p>先把电话留清楚，再谈别的。</p>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="box">
+          <h3>快速联系</h3>
+          <p>电话：<strong>18182611800</strong></p>
+          <p style="margin-top:8px">建议：你也可以在此处放微信号/二维码（后续我可以教你怎么放图）。</p>
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn btn-primary" href="tel:18182611800">拨打电话</a>
+            <a class="btn" href="#services">回到服务内容</a>
+          </div>
+          <p class="hint" style="margin-top:10px">
+            提醒：如果你打算让百度收录并用域名访问，后面需要买域名并正确做 DNS 解析与备案（cn 域名基本要备案）。
+          </p>
+        </div>
+
+        <div class="box">
+          <h3>留言（占位版）</h3>
+          <form onsubmit="event.preventDefault(); alert('已提交（演示版）。如果要真正收到留言，需要接第三方表单或后端。');">
+            <div class="row">
+              <input placeholder="姓名（可选）" />
+              <input placeholder="联系电话（建议填）" />
+            </div>
+            <textarea placeholder="你想咨询的问题，比如：我这种情况适合哪条路线？需要准备什么？"></textarea>
+            <button class="btn btn-primary" type="submit">提交咨询</button>
+            <div class="hint">说明：目前为展示页，提交按钮只弹提示。后续可接“表单工具/企业微信/邮箱”实现真实收集。</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="container">
+      © <span id="y"></span> 西安火焰蓝消防有限公司 ｜ 本站为展示页面（可继续完善资质、地址、师资、课程细节）。
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
